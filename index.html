@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clément Hervouet's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h2 class="logo">Clément Hervouet's Portfolio</h2>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+        <button id="dark-mode-toggle">
+            <img src="moon-solid-full.svg" alt="Toggle Dark Mode" class="theme-icon">
+        </button>
+    </nav>
+
+    <!-- Hero / Intro Card -->
+    <section id="about" class="section center">
+        <div class="card intro-card">
+            <img src="clm.jfif" alt="My Photo" class="avatar">
+            <h1>Clément Hervouet</h1>
+            <p>
+              Software Engineer apprentice. 
+              <br />
+              Making the world better by typing on my keyboard.            
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="card-container">
+
+            <!-- Example Project Card -->
+            <div class="card project-card">
+                <h3>Project Sanic</h3>
+                <p>Collaborative school project : a python videogame where Sanic is the hero.</p>
+                <a href="https://github.com/BreizhHardware/project_sanic" target="_blank" class="btn">View on GitHub</a>
+            </div>
+
+            <div class="card project-card">
+                <h3>CipaUtils</h3>
+                <p>Collaborative Java plugin for a Minecraft SMP. </p>
+                <a href="https://github.com/BreizhHardware/CipaUtils" target="_blank" class="btn">View on GitHub</a>
+            </div>
+
+            <div class="card project-card">
+                <h3>My portfolio</h3>
+                <p>Something cool I made with <3</p>
+                <a href="https://github.com/ClementHVT/Portfolio" target="_blank" class="btn">View on GitHub</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="section">
+        <div>
+            <h2 class="section-title">Resume</h2>
+
+            <!-- Embedded PDF -->
+            <div class="pdf-container">
+              <iframe src="resume.pdf#zoom=90"></iframe>
+            </div>
+
+            <div class="btn-container">
+              <a class="btn big-btn" href="resume.pdf" target="_blank">Download PDF</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
