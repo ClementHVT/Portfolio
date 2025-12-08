@@ -200,10 +200,76 @@ body.dark-mode .pdf-container {
     padding: 5px;
 }
 
+/* Hamburger menu button (hidden by default, shown on small screens) */
+#menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    padding: 6px 8px;
+}
+
 #dark-mode-toggle .theme-icon {
     transition: transform 0.3s;
 }
 
 #dark-mode-toggle:active .theme-icon {
     transform: rotate(720deg);
+}
+
+/* ----- Responsive: Mobile Navigation ----- */
+@media (max-width: 1000px) {
+    nav {
+        padding: 12px;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1rem;
+        margin-right: auto;
+    }
+
+    /* Hide the centered horizontal list on small screens; use a vertical stacked menu when shown */
+    nav ul {
+        position: static;
+        left: auto;
+        transform: none;
+        display: none; /* hidden by default on mobile */
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        margin-top: 10px;
+        background: transparent;
+        padding: 0;
+    }
+
+    /* Utility class to show the mobile menu (toggle via JS adding/removing this class) */
+    nav ul.show {
+        display: flex;
+        align-items: center;
+    }
+
+    nav li a {
+        padding: 8px 12px;
+    }
+
+    /* Keep the dark mode button visible on the right */
+    #dark-mode-toggle {
+        order: 2;
+        margin-left: 8px;
+    }
+
+    /* Show hamburger on small screens */
+    #menu-toggle {
+        display: block;
+        order: 1;
+        margin-right: 8px;
+    }
+
+    /* Optionally reduce card widths for small screens */
+    .card, .intro-card {
+        width: 100%;
+        max-width: 360px;
+    }
 }
