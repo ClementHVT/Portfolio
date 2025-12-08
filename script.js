@@ -33,3 +33,20 @@ document.querySelectorAll("nav a").forEach(link => {
         target.scrollIntoView({ behavior: "smooth" });
     });
 });
+// Responsive menu toggle (hamburger)
+const menuToggle = document.getElementById('menu-toggle');
+const navList = document.querySelector('nav ul');
+if (menuToggle && navList) {
+    menuToggle.addEventListener('click', () => {
+        const shown = navList.classList.toggle('show');
+        menuToggle.setAttribute('aria-expanded', shown ? 'true' : 'false');
+    });
+
+    // Close the mobile menu when a nav link is clicked
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            navList.classList.remove('show');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+}
