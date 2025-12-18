@@ -218,6 +218,42 @@ body.dark-mode .pdf-container {
     transform: rotate(720deg);
 }
 
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1000;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.dark-mode #back-to-top {
+    background: #0d6efd;
+}
+
+#back-to-top:hover {
+    background: #005ad1;
+}
+
+body.dark-mode #back-to-top:hover {
+    background: #0956b3;
+}
+
 /* ----- Responsive: Mobile Navigation ----- */
 @media (max-width: 1000px) {
     nav {
