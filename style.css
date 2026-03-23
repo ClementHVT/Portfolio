@@ -93,6 +93,14 @@ nav a {
     margin-bottom: 20px;
 }
 
+.links{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    font-size: small;
+}
+
 /* ----- Project Cards Layout ----- */
 .card-container {
     display: flex;
@@ -355,4 +363,13 @@ body.dark-mode footer {
         width: 100%;
         max-width: 360px;
     }
+
+    /* Allow for side by side when width is sufficient */
+    @media (min-width: 1000px) {
+        .links {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 0;
+        }
+}
 }
